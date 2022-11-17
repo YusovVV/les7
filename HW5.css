@@ -1,0 +1,234 @@
+.container {
+    display: flex;    
+    /* flex: 2 1 300px; */
+    flex-grow: 15;
+    flex-basis: 300px;
+    flex-direction: column;
+   
+   
+   } 
+   .listitem {    
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px black solid;
+    border-radius: 15px;
+    width: 30%;
+    
+   }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    background-color: rgb(202, 183, 9);
+    height: 75px;
+  }
+  .Bcont {
+    display: flex;
+  }
+.as1, .as2 {    
+    flex-basis: 50px;
+    flex-grow: 1;
+    display: flex;    
+    justify-content: center; 
+      
+}
+.as1 {
+    background-color: rgb(252, 175, 252);
+}
+.as2 {
+    background-color: rgb(158, 181, 224);
+}
+.Foot {
+  background-color:rgb(124, 235, 124);  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+}
+p {
+   text-align: center; 
+}
+h1 {
+    text-align: center;
+}
+.moun {
+ height: auto;
+ width: 100%;
+ border-radius: 100%;
+ border: 10px rgba(231, 111, 231, 0.5) solid;   
+}
+.lscontainer {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+.Go
+{
+ background-color:blueviolet; 
+  height: 20px;
+  width: 50px;
+  border-radius: 50px;
+  color: rgb(255, 255, 255); 
+}
+.listitem:hover {
+background-color: lightseagreen;
+}
+.holder {
+    display: flex;
+    flex-wrap: wrap;
+    width: 660px;
+    border: 2px black solid;
+    border-radius:  30px 30px 0px 0px;
+    overflow: hidden;
+    
+}
+
+.item1 {
+    background-color: orangered;
+    flex-grow: 3;
+    display: flex;
+    flex-basis: 330px;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+    order: 1;
+    
+
+}
+.item2 {
+    background-color: blue;
+    flex-grow: 2;
+    display: flex;
+    flex-basis: 220px;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+    order: 4;
+}
+.item3 {
+    background-color: blueviolet;
+    flex-grow: 2;
+    display: flex;
+    flex-basis: 220px;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+       order: 3;
+}
+.item4 {
+    background-color: green;
+    flex-grow: 2;
+    display: flex;
+    flex-basis: 220px;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+    order: 5;
+}
+.item5 {
+    background-color: orange;
+    flex-grow: 3;
+    display: flex;
+    flex-basis: 330px;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+    order: 2;
+}
+
+@media (min-width: 576px){
+
+}
+@media (max-width: 1199px){
+
+}
+
+/* приховуємо чекбокс */
+#menu__toggle {
+    opacity: 0;
+  }
+  /* стилізуємо кнопку */
+  .menu__btn {
+    display: flex; /* використовуємо flex для центрування вмісту */
+    align-items: center;  /* центруємо вміст кнопки */
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  /* додаємо "гамбургер" */
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #fdfdfd;
+  }
+  .menu__btn > span::before {
+    content: '';
+    top: -8px;
+  }
+  .menu__btn > span::after {
+    content: '';
+    top: 8px;
+  }
+  /* контейнер меню */
+.menu__box {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    left: -100%;
+    width: 300px;
+    height: 100%;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    text-align: center;
+    background-color: #ECEFF1;
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+    transition-duration: .25s;
+  }
+  
+  /* элементи меню */
+  .menu__item {
+    display: block;
+    padding: 12px 24px;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    transition-duration: .25s;
+  }
+  .menu__item:hover {
+    background-color: #CFD8DC;
+  }
+  
+  #menu__toggle:checked ~ .menu__btn > span {
+    transform: rotate(45deg);
+  }
+  
+  #menu__toggle:checked ~ .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0);
+  }
+  
+  #menu__toggle:checked ~ .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  
+  #menu__toggle:checked ~ .menu__box {
+    visibility: visible;
+    left: 0;
+  }
+  
